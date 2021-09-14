@@ -1,5 +1,6 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   mode: "development",
@@ -8,7 +9,8 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
-  plugins: [new CleanWebpackPlugin()],
+  devtool: "inline-source-map",
+  plugins: [new CleanWebpackPlugin(), new Dotenv()],
   module: {
     rules: [
       {

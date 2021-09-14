@@ -1,10 +1,11 @@
-import './style.css';
+import "./style.css";
 
 function draw() {
-  const el = document.createElement('div');
-  el.innerHTML = 'Hello';
-  el.classList.add('title');
+  const el = document.createElement("div");
+  el.innerHTML = "Hello";
+  el.classList.add("title");
   return el;
 }
 
 document.body.appendChild(draw());
+console.log(process.env.DB_HOST);
